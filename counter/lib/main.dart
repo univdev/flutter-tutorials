@@ -31,7 +31,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Counter App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: Scaffold(
@@ -41,7 +40,7 @@ class _MyAppState extends State<MyApp> {
             children: [
               Text(
                 'Click Count',
-                style: TextStyle(fontSize: 24),
+                style: Theme.of(context).textTheme.titleLarge,
               ),
               Text(
                 _counter.toString(),
